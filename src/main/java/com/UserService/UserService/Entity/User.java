@@ -5,7 +5,7 @@ import jakarta.persistence.*;
 
 
 @Entity
-public class User {
+public class Users{
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY,generator="userid_generator")
     @SequenceGenerator(name="userid_generator",sequenceName = "useridsequence",initialValue=1,allocationSize=5)
@@ -14,6 +14,34 @@ public class User {
     public String password;
     public String roles;
     public String emailId;
+
+    public String getPaymentMethod() {
+        return paymentMethod;
+    }
+
+    public void setPaymentMethod(String paymentMethod) {
+        this.paymentMethod = paymentMethod;
+    }
+
+    public String getSrcAccount() {
+        return srcAccount;
+    }
+
+    public void setSrcAccount(String srcAccount) {
+        this.srcAccount = srcAccount;
+    }
+
+    public double getAvailableAmount() {
+        return availableAmount;
+    }
+
+    public void setAvailableAmount(double availableAmount) {
+        this.availableAmount = availableAmount;
+    }
+
+    private String paymentMethod;
+    private String srcAccount;
+    private double availableAmount;
 
     public String getUsername() {
         return username;

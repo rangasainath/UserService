@@ -11,7 +11,7 @@ public class UserDTO {
     int id;
     String username;
     String password;
-    String Roles;
+    String roles;
     String emailId;
 
     public int getId() {
@@ -39,11 +39,11 @@ public class UserDTO {
     }
 
     public String getRoles() {
-        return Roles;
+        return roles;
     }
 
     public void setRoles(String roles) {
-        Roles = roles;
+        this.roles = roles;
     }
 
     public String getEmailId() {
